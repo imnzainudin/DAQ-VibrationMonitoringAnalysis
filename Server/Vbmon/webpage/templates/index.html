@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Vibration Analysis Monitor</title>
+
+		<!-- first load django static tag. -->
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="{% url 'index:home' %}">imnzainudin</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="{% url 'index:home' %}">Home</a></li>
+					<li><a href="{% url 'tables:tables' %}">Table Dataframe</a></li>
+					<li><a href="{% url 'times:time' %}">Time Domain Analysis</a></li>
+					<li><a href="{% url 'frequency:frequency' %}">Frequency Domain Analysis</a></li>
+					<li><a href="{% url 'filter:custom' %}">Custom Analysis</a></li>
+					<li><a href="{% url 'live:live' %}">Live Monitoring</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>Vibration Analysis Monitoring</h1>
+					<p>A project to develop an Online Data Acquisition System (DAQ) as a requirement for completing 
+						internship programme. This website was designed by Iman Zainudin from Universiti Tun Hussein Onn Malaysia (UTHM)</p>
+				</div>
+				<video autoplay loop muted playsinline src="{% static "images/uthm.mp4" %}"></video>
+			</section>
+
+		<!-- Highlights -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>Type of Analysis</h2>
+						<p>Choose one of the option to view the specific data related to the analysis selected.</p>
+					</header>
+					<div class="highlights">
+						<section>
+							<div class="content">
+								<header>
+									<a href="{% url 'tables:tables' %}" class="icon fa-table"><span class="label">Icon</span></a>
+									<h3>Table Dataframe</h3>
+								</header>
+								<p>Vibration data taken live from the site including time specification for each data.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="{% url 'times:time' %}" class="icon fa-line-chart"><span class="label">Icon</span></a>
+									<h3>Time Domain Analysis</h3>
+								</header>
+								<p>An analysis of the accelaration in reference to time. The data is plotted in line graph.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="{% url 'frequency:frequency' %}" class="icon fa-flash"><span class="label">Icon</span></a>
+									<h3>Frequency Domain Analysis</h3>
+								</header>
+								<p>An analysis of the frequency in reference to the amplitude of the signal instead of time. It is subjected as a spectrum analysis.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="{% url 'filter:custom' %}" class="icon fa-cogs"><span class="label">Icon</span></a>
+									<h3>Custom Analysis</h3>
+								</header>
+								<p>A custom analysis which user can filter data by date and generate analysis based on the filtered data.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="{% url 'live:live' %}" class="icon fa-wifi"><span class="label">Icon</span></a>
+									<h3>Live Monitoring</h3>
+								</header>
+								<p>A monitoring system which enables user to view the vibration analysis in real time.</p>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+
+		<!-- CTA -->
+			<section id="cta" class="wrapper">
+				<div class="inner">
+					<h2>The Benefit of Control Based Monitoring</h2>
+					<p>Helps to monitors the levels and patterns of vibration signals within a component, machinery or structure, to detect abnormal
+					vibration events and to evaluate the overall condition of the test object. Allows you to plan, schedule, and undertake repairs 
+					during your regularly scheduled downtimes, thereby avoiding costly, unexpected outages.</p>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<h3>Disclaimer</h3>
+							<p>This website was created solely on purpose to complete the requirement for internship programme. All of the resource provided inside this web are limited for private use only.
+								We are not liable for any misleading interpretation by user.
+							</p>
+						</section>
+						<section>
+							<h4></h4>
+							<ul class="alt">
+							</ul>
+						</section>
+						<section>
+							<h4>Contact Us:</h4>
+							<ul class="plain">
+								<li><a href="https://twitter.com/imnzainudin" target="_blank"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+								<li><a href="https://www.facebook.com/muhammad.iman.3705" target="_blank"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+								<li><a href="https://www.instagram.com/imnzainudin/?hl=en" target="_blank"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+								<li><a href="https://github.com/imnzainudin" target="_blank"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="copyright">
+						&copy; 2021. Photos <a href="https://unsplash.co" target="_blank">Unsplash</a>, Video <a href="https://coverr.co" target="_blank">Coverr</a>.
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>
